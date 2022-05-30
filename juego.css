@@ -1,0 +1,151 @@
+.firstmode{
+    /*background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); 
+    background-blend-mode: normal, normal, screen, overlay, normal;*/
+    background-image: url("img/claro.jpg");
+    padding: 50px; 
+    color: #000;  
+    font-family: 'Press Start 2P', cursive; 
+    
+}
+
+button.firstmode {
+    color: #ffffff;
+    background: #047c00 ;
+}
+
+button.darkmode {
+    background: #000;
+    
+}
+
+
+.darkmode{
+    /*background: linear-gradient(129.96deg, #FF2F2F 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #FFFFFF 0%, #020063 100%), linear-gradient(58.72deg, #2200F2 0%, #530000 100%), linear-gradient(154.03deg, #B70000 0%, #FF003D 74.04%), linear-gradient(341.1deg, #FF0000 7.52%, #0038FF 77.98%), linear-gradient(136.23deg, #00C2FF 11.12%, #FF0000 86.47%), radial-gradient(57.37% 100% at 50% 0%, #B50000 0%, #0034BB 100%);
+    background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;*/
+    background-image: url("img/oscuro.jpg");
+     padding: 50px; 
+     color: #fff;  
+     font-family: 'Press Start 2P', cursive; 
+
+}
+
+
+
+button{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.seguir, .abandonar, button {
+    cursor: pointer;
+}
+
+#titulo {
+
+font-size: 16px;
+text-align: center;
+}
+
+#temaButton {
+    background-color: #3c90e0;
+    padding: 10px;
+    position: fixed;
+    z-index: 999999999;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+#botones{
+text-align: center;
+margin: 5px;
+
+}
+
+#resultado{
+    text-align: center;
+    height: 100%;
+   
+    
+  
+}
+
+#maquina{
+ flex-direction: row-reverse;
+ display:flex;
+ float: left;
+ margin: 0 auto;
+ width: 50%;
+
+}
+
+
+
+#player{
+    display:flex;
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    
+}
+.cantidad {
+    margin-top: 200px;
+    text-align: center;
+    
+}
+.Foot {
+    padding: 100px;
+    text-align: center;
+}
+
+
+
+#ranking {
+    background-color:#3c90e0;
+    padding: 0 20px;
+    position: relative;
+}
+
+.panelRanking {
+    position: absolute;
+    background-color:inherit;
+    opacity:0.8;
+    padding: 15px;
+    width: max-content;
+    border: solid 2px black;
+    z-index: 1;
+    right: -45px;
+    bottom: 57px;
+}
+
+.hide {
+    display: none;
+}
+
+#abandonar{
+    background: #3c90e0 ;
+    padding: 0 20px;
+    
+
+}
+
+.fin-juego {
+    height: 300px;
+    width:500px;
+    background: #3c90e0 ;
+    position: absolute;
+    padding: 20px;
+    top: 230px;
+    left: 570px;
+}
+
+.fin-juego--open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fin-juego--text {
+    text-align: center;
+    margin: 10px
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./juego.css">
+ <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<title>juego</title>
+    
+ <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&family=Yuji+Boku&display=swap" rel="stylesheet">
+   
+</head>
+
+<div id="end-game" class="fin-juego hide">
+    PARTIDA TERMINADA
+</div>
+
+<span id="tiempo"></span>
+<div id="titulo"><h1 id="ppt">Piedra Papel o Tijera</h1></div>
+
+<body>
+
+<nav>
+<button id="temaButton" type="button"> Cambiar <br/> Tema </button>  
+
+<div id="botones">
+<button id="Piedra"  type="button">
+<img src="./img/Piedra.png" alt="piedra">
+</button>
+
+ <button id="Papel"  type="button">
+<img src="./img/Papel.png" alt="papel">
+</button>
+
+<button id="Tijera"  type="button"> 
+<img src="./img/Tijera.png" alt="tijera">
+</button>
+</div>
+</nav>
+
+<article>
+<div id="resultado">
+    <h2>Resultado</h2>
+    <div id="textresultado"> Elegir</div> 
+    <div id="maquina">
+    <img id="resultmaquina" src="./img/rock.png">  
+    <h4>Maquina</h4>
+    </div>
+    
+    
+    <div id="player">
+    <img id="resultplayer" src="./img/rock.png">
+    <h4 id="jugadornombre">Jugador</h4>
+    </div>
+
+</div>
+
+</article>
+<br> </br>
+
+<section>
+
+<div class="cantidad" >
+ <h2>Resultado de las partidas</h2>   
+ 
+ <span id="Contadorm" >  0  </span> <span>Maquina</span>  
+ <span id="jn">Jugador</span> <span id="Contadorj" >  0 </span>
+ 
+
+</div>
+
+</section>
+
+
+    <footer>
+        <div class=" Foot">
+        <button id="ranking">
+            <div id="panelRanking" class="panelRanking hide"></div>
+            <h4>Ranking</h4>
+        </button> 
+        <button id="abandonar"> <h4>Abandonar el juego</h4></button>
+    
+        </div>
+    </footer>
+   
+    <script src="Juego.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert.js"></script>
+</body>
+</html>
