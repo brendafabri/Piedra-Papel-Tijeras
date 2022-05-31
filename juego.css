@@ -45,15 +45,6 @@ font-size: 16px;
 text-align: center;
 }
 
-#temaButton {
-    background-color: #3c90e0;
-    padding: 10px;
-    position: fixed;
-    z-index: 999999999;
-    bottom: 10px;
-    right: 10px;
-
-}
 
 #botones{
 text-align: center;
@@ -64,9 +55,6 @@ margin: 5px;
 #resultado{
     text-align: center;
     height: 100%;
-   
-    
-  
 }
 
 #maquina{
@@ -97,12 +85,23 @@ margin: 5px;
     text-align: center;
 }
 
+#temaButton {
+    background-color: #3c90e0;
+    padding: 10px;
+    position: fixed;
+    z-index: 999999999;
+    bottom: 20px;
+    right: 20px;
 
+}
 
 #ranking {
     background-color:#3c90e0;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
+    z-index: 999999999;
+    bottom: 20px;
+    left: 20px;
 }
 
 .panelRanking {
@@ -113,7 +112,7 @@ margin: 5px;
     width: max-content;
     border: solid 2px black;
     z-index: 1;
-    right: -45px;
+    right: -32px;
     bottom: 57px;
 }
 
@@ -126,26 +125,4 @@ margin: 5px;
     padding: 0 20px;
     
 
-}
-
-.fin-juego {
-    height: 300px;
-    width:500px;
-    background: #3c90e0 ;
-    position: absolute;
-    padding: 20px;
-    top: 230px;
-    left: 570px;
-}
-
-.fin-juego--open {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.fin-juego--text {
-    text-align: center;
-    margin: 10px
 }

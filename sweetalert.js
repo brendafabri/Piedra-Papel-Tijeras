@@ -1,4 +1,5 @@
-function initGame () { 
+function initGame () {
+  inicioRanking();
   Swal.fire({
     title: jugador,
     input: 'text',
@@ -40,9 +41,7 @@ function initGame () {
   })
 }
    
-  
 initGame();
-   
 
 abandonar.onclick = (e) => {
     Swal.fire({
@@ -57,24 +56,47 @@ abandonar.onclick = (e) => {
       popup: 'animate__animated animate__fadeOutUp'
     }
   }).then((result) => {
-    /* Guardar para el raking */
     if (result.isConfirmed) {
       initGame();
     }
   })
 }
 
-//este es el css del popup
 
-//.swal2-title {
-//  position: relative;
-//  max-width: 100%;
-//  margin: 0;
-//  padding: 1.8em 1em 0;
-//  color: inherit;
-//  font-size: 17px;
-//  font-weight: 600;
-//  text-align: center;
-//  text-transform: none;
-//  word-wrap: break-word;
-//}
+function endGame(resultado, nombreJugador, puntaje) {
+  let textResultado;
+  switch (resultado) {
+    case Empate:
+      textResultado = `${nombreJugador} has empatado`
+      break;
+    case Perdiste:
+      textResultado = `${nombreJugador} has perdido :(  Has hecho ${puntaje} puntos`
+      break;
+    case Ganaste:
+      textResultado =  `${nombreJugador} has ganado!!  Has hecho ${puntaje} puntos`
+      break;
+    default:
+      textResultado =  `Ha pasado el tiempo`
+      break;
+}
+
+  Swal.fire({
+    title: "PARTIDA TERMINADA",
+    text: textResultado,
+    showCancelButton: true,
+    confirmButtonText: 'Reiniciar',
+    cancelButtonText: 'Cerrar',
+    reverseButtons: true,
+    allowOutsideClick: false,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      resetGame();
+      gameMain(localStorage.getItem('player'));
+    } else if (
+      result.dismiss === Swal.DismissReason.cancel
+    ) {
+      resetGame();
+      initGame();
+    }
+  })
+}
