@@ -13,3 +13,6 @@ TijeraBTN.addEventListener("click", () =>{
 document.getElementById("ranking").addEventListener("click", () =>{
     panelRanking.classList.toggle('hide');
 });
+Play.addEventListener("click", () =>{
+    sonido();
+});

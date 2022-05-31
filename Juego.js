@@ -7,8 +7,7 @@ function gameMain (playerName) {
     localStorage.setItem('player', playerName);
     
     timer();
-    sonido();
-    
+  
     jugadornombre.innerHTML = playerName;
     jn.innerHTML = playerName;   
 }
@@ -154,15 +153,19 @@ function agregoMejores(){
 
 ///////Musica//////////
 function sonido(){
-    const sonido=new Audio('./audio/man-is-he-mega-glbml-22045.mp3');
-    sonido.loop = true;
-    sonido.play();
-    sonido.volume=0.2;
+   if( count== 0 ){
+        count = 1;
+        newsonido.play();
+    }else{
+        count = 0;
+        newsonido.pause();
+    }
+    newsonido.volume=0.1;
 }
 
 //////timpo//////
 function timer() {
-    let tiempo = 15;
+    let tiempo = 20;
 
     countDown = () => {
         setTimeout(() => {

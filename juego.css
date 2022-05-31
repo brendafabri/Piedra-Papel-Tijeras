@@ -115,6 +115,16 @@ margin: 5px;
     right: -32px;
     bottom: 57px;
 }
+#Play{
+    background-color:#3c90e0;
+    padding: 0 20px;
+    position: fixed;
+    width:100px;
+    height: 35px;
+    z-index: 999999999;
+    top: 20px;
+    left: 55px;
+}
 
 .hide {
     display: none;
